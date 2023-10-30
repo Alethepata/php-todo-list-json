@@ -4,18 +4,22 @@ createApp({
     data() {
         return {
             apiUrl: 'server.php',
-            list:[]
+            list: [],
+            newTask:''
         }
     },
     methods: {
         getList() {
             axios.get(this.apiUrl)
             .then(res => {
-                this.list = res.data
+                this.list = res.data;
             })
+        },
+        addTask() {
+            this.list += this.newTask;
         }
     },
     mounted() {
-        this.getList()
+        this.getList();
     }
 }).mount('#app')
