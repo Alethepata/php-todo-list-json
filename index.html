@@ -24,6 +24,24 @@
 
               </ul>
         </div>
+        <div class="input-group mt-3">
+
+            <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Add Task"
+            v-model.trim="newTask"
+            >
+            <button 
+            class="btn btn-outline-secondary" 
+            type="button"
+            @click="addTask"
+            >
+            Invia
+            </button>
+
+          </div>
+          
     </div>
     <script src="script.js"></script>
 </body>
